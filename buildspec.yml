@@ -21,8 +21,4 @@ phases:
         - echo ls -ltr 
         -   aws s3 cp dist/Applicationform s3://${S3_BUCKET} --recursive
         - echo Build completed on `date`
-artifacts:
-  files:
-      - '**/*'
-  base-directory: 'dist/Applicationform'
-  discard-paths: yes
+
