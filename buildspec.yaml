@@ -23,8 +23,16 @@ build:
 
 post_build:
     commands:
+<<<<<<< HEAD
       -aws s3 sync ./dist/$APP_NAME s3://$S3_BUCKET --acl 'public-read' --delete
       
+=======
+      # Clear S3 bucket.
+      - aws s3 rm s3://$S3_BUCKET/ --recursive
+      # Copy files from dist to S3
+      - cd dist
+      - aws s3 cp -r $APP_NAME s3://$S3_BUCKET/ --recursive
+>>>>>>> fe52a2d6d5095d157e998570b6be0c907d9459a9
       
 
 
