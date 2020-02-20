@@ -8,7 +8,7 @@ import { PostEmployeeService } from './Service/post-employee.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Applicationform';
+
   test="manoj"
 
   employeeModel=  new Employee("Manoj","Kalyan","abc@gmail.com",1234567890,"s3data")
